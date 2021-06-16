@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_catalog/widgets/drawer.dart';
 
+//Day 11 - Learn about context, constraints and 3 trees: widget, element, render. .
+
 class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
