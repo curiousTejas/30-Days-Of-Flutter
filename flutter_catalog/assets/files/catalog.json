@@ -1,0 +1,52 @@
+{
+    "products": [
+        {
+            "id": 1,
+            "name": "Google Pixel 4a",
+            "descriptn": "Google Pixel phone from the 4th Generation",
+            "price": 29999,
+            "color": "#000000",
+            "image": "https://images-na.ssl-images-amazon.com/images/I/7199N-Uz2AL._SX679_.jpg"
+        },
+        {
+            "id": 2,
+            "name": "Google Pixel 4 XL",
+            "descriptn": "Google Pixel phone from the 4th Generation",
+            "price": 79990,
+            "color": "#ff7f50",
+            "image": "https://images-na.ssl-images-amazon.com/images/I/41cQkWRu0yL._SY450_.jpg"
+        },
+        {
+            "id": 3,
+            "name": "Google Pixel 3 XL",
+            "descriptn": "Google Pixel phone from the 3rd Generation",
+            "price": 59990,
+            "color": "#ffffff",
+            "image": "https://images-na.ssl-images-amazon.com/images/I/51SDXLDzvHL._AC_SL1144_.jpg"
+        },
+        {
+            "id": 4,
+            "name": "Google Pixel 5",
+            "descriptn": "Google Pixel phone from the 5th Generation",
+            "price": 67250,
+            "color": "#",
+            "image": "https://images-na.ssl-images-amazon.com/images/I/81AqwYyZjzL._SL1500_.jpg"
+        },
+        {
+            "id": 5,
+            "name": "Google Nest Mini",
+            "descriptn": "Google Nest Mini is a smart speaker from Google",
+            "price": 4499,
+            "color": "#000000",
+            "image": "https://www.powerplanetonline.com/cdnassets/google_nest_mini_negro_carbon_altavoz_inteligente_01_l.jpg"
+        },
+        {
+            "id": 6,
+            "name": "Google Home",
+            "descriptn": "Google Home is a smart speaker from Google",
+            "price": 8999,
+            "color": "#000000",
+            "image": "https://rukminim1.flixcart.com/image/416/416/jfsknm80/smart-assistant/b/h/m/home-ghome-google-original-imaf46b7mrhmpzdg.jpeg?q=70"
+        }
+    ]
+}
