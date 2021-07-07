@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_catalog/core/store.dart';
 import 'package:flutter_catalog/models/cart.dart';
 import 'dart:convert';
@@ -17,7 +16,6 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  final url = "https://jsonkeeper.com/b/90MO";
   @override
   void initState() {
     // ignore: todo
@@ -26,11 +24,12 @@ class _HomePageState extends State<HomePage> {
     loadData();
   }
 
-  loadData() async {
+  Future<void> loadData() async {
+    final url = Uri.parse("https://jsonkeeper.com/b/90MO");
     await Future.delayed(Duration(seconds: 2));
     // final catalogJSON =
     //     await rootBundle.loadString("assets/files/catalog.json");
-    final response = await http.get(Uri.parse(url));
+    final response = await http.get(url);
     final catalogJSON = response.body;
 
     final decoded = jsonDecode(catalogJSON);
@@ -53,7 +52,7 @@ class _HomePageState extends State<HomePage> {
               CupertinoIcons.cart,
             ),
           ).badge(
-              color: Vx.red500,
+              color: context.cardColor,
               size: 20,
               count: _cart.items.length,
               textStyle: TextStyle(
