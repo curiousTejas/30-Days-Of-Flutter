@@ -37,7 +37,7 @@ class HomeDetailsPage extends StatelessWidget {
                 .h32(context),
             Expanded(
               child: VxArc(
-                height: 30.0,
+                height: 20.0,
                 arcType: VxArcType.CONVEY,
                 edge: VxEdge.TOP,
                 child: Container(
@@ -47,7 +47,8 @@ class HomeDetailsPage extends StatelessWidget {
                     children: [
                       catalog.name.text.xl4.bold
                           .color(context.accentColor)
-                          .make(),
+                          .make()
+                          .p16(),
                       catalog.descriptn.text.xl
                           .textStyle(context.captionStyle)
                           .make(),
@@ -57,9 +58,9 @@ class HomeDetailsPage extends StatelessWidget {
                           .sm
                           .textStyle(context.captionStyle)
                           .make()
-                          .p16()
+                          .p20()
                     ],
-                  ).py64(),
+                  ).py32(),
                 ),
               ),
             )
