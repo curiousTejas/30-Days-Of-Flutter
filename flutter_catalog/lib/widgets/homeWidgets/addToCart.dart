@@ -7,7 +7,7 @@ import 'package:velocity_x/velocity_x.dart';
 
 class AddToCart extends StatelessWidget {
   final Item catalog;
-  AddToCart({
+  const AddToCart({
     Key key,
     this.catalog,
   }) : super(key: key);
@@ -15,8 +15,8 @@ class AddToCart extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     VxState.watch(context, on: [AddMutation, RemoveMutation]);
-    final CartModel _cart = (VxState.store as Store).cart;
-    bool isInCart = _cart.items.contains(catalog) ?? false;
+    final CartModel cart = (VxState.store as Store).cart;
+    bool isInCart = cart.items.contains(catalog) ?? false;
     return ElevatedButton(
         onPressed: () {
           if (!isInCart) {
@@ -26,8 +26,8 @@ class AddToCart extends StatelessWidget {
         style: ButtonStyle(
             backgroundColor:
                 MaterialStateProperty.all(context.theme.buttonColor),
-            shape: MaterialStateProperty.all(StadiumBorder())),
+            shape: MaterialStateProperty.all(const StadiumBorder())),
         child:
-            isInCart ? Icon(Icons.done) : Icon(CupertinoIcons.cart_badge_plus));
+            isInCart ? const Icon(Icons.done) : const Icon(CupertinoIcons.cart_badge_plus));
   }
 }

@@ -26,7 +26,7 @@ class _HomePageState extends State<HomePage> {
 
   Future<void> loadData() async {
     final url = Uri.parse("https://jsonkeeper.com/b/90MO");
-    await Future.delayed(Duration(seconds: 2));
+    await Future.delayed(const Duration(seconds: 2));
     // final catalogJSON =
     //     await rootBundle.loadString("assets/files/catalog.json");
     final response = await http.get(url);
@@ -41,23 +41,23 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
-    final _cart = (VxState.store as Store).cart;
+    final cart = (VxState.store as Store).cart;
     return Scaffold(
         backgroundColor: context.canvasColor,
         floatingActionButton: VxBuilder(
           builder: (context, store, status) => FloatingActionButton(
             backgroundColor: context.theme.buttonColor,
             onPressed: () => Navigator.pushNamed(context, Routes.cartRoute),
-            child: Icon(
+            child: const Icon(
               CupertinoIcons.cart,
             ),
           ).badge(
               color: context.cardColor,
               size: 20,
-              count: _cart.items.length,
+              count: cart.items.length,
               textStyle: TextStyle(
                   color: context.accentColor, fontWeight: FontWeight.bold)),
-          mutations: {AddMutation, RemoveMutation},
+          mutations: const {AddMutation, RemoveMutation},
         ),
         body: SafeArea(
           child: Container(
@@ -69,7 +69,7 @@ class _HomePageState extends State<HomePage> {
                 if (CatalogModel.items != null && CatalogModel.items.isNotEmpty)
                   CatalogList().py16().expand()
                 else
-                  CircularProgressIndicator().centered().expand(),
+                  const CircularProgressIndicator().centered().expand(),
               ],
             ),
           ),

@@ -20,7 +20,7 @@ class ItemWidget extends StatelessWidget {
         subtitle: Text(item.descriptn),
         trailing: Text(
           "₹${item.price}",
-          style: TextStyle(
+          style: const TextStyle(
             color: Colors.deepPurple,
             fontWeight: FontWeight.bold,
           ),

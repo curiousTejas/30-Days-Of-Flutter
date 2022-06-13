@@ -10,7 +10,7 @@ class CatalogList extends StatelessWidget {
   Widget build(BuildContext context) {
     return !context.isMobile
         ? GridView.builder(
-            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 2, crossAxisSpacing: 20.0),
             shrinkWrap: true,
             itemCount: CatalogModel.items.length,
